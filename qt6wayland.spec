@@ -7,7 +7,7 @@
 #
 Name     : qt6wayland
 Version  : 6.6.2
-Release  : 8
+Release  : 9
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtwayland-everywhere-src-6.6.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtwayland-everywhere-src-6.6.2.tar.xz
 Summary  : No detailed summary available
@@ -83,7 +83,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707941267
+export SOURCE_DATE_EPOCH=1707953195
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -144,7 +144,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1707941267
+export SOURCE_DATE_EPOCH=1707953195
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6wayland
 cp %{_builddir}/qtwayland-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6wayland/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -508,6 +508,12 @@ popd
 /usr/lib64/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginConfigVersionImpl.cmake
 /usr/lib64/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6Gui/Qt6QWaylandIntegrationPluginTargets.cmake
+/usr/lib64/cmake/Qt6WaylandClient/Qt6DmaBufServerBufferPluginAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6WaylandClient/Qt6DmaBufServerBufferPluginConfig.cmake
+/usr/lib64/cmake/Qt6WaylandClient/Qt6DmaBufServerBufferPluginConfigVersion.cmake
+/usr/lib64/cmake/Qt6WaylandClient/Qt6DmaBufServerBufferPluginConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6WaylandClient/Qt6DmaBufServerBufferPluginTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6WaylandClient/Qt6DmaBufServerBufferPluginTargets.cmake
 /usr/lib64/cmake/Qt6WaylandClient/Qt6DrmEglServerBufferPluginAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6WaylandClient/Qt6DrmEglServerBufferPluginConfig.cmake
 /usr/lib64/cmake/Qt6WaylandClient/Qt6DrmEglServerBufferPluginConfigVersion.cmake
@@ -578,12 +584,24 @@ popd
 /usr/lib64/cmake/Qt6WaylandClient/Qt6WaylandClientTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6WaylandClient/Qt6WaylandClientTargets.cmake
 /usr/lib64/cmake/Qt6WaylandClient/Qt6WaylandClientVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6DmaBufServerBufferIntegrationPluginAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6DmaBufServerBufferIntegrationPluginConfig.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6DmaBufServerBufferIntegrationPluginConfigVersion.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6DmaBufServerBufferIntegrationPluginConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6DmaBufServerBufferIntegrationPluginTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6DmaBufServerBufferIntegrationPluginTargets.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6DrmEglServerBufferIntegrationPluginAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6DrmEglServerBufferIntegrationPluginConfig.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6DrmEglServerBufferIntegrationPluginConfigVersion.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6DrmEglServerBufferIntegrationPluginConfigVersionImpl.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6DrmEglServerBufferIntegrationPluginTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6DrmEglServerBufferIntegrationPluginTargets.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandDmabufClientBufferIntegrationPluginAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandDmabufClientBufferIntegrationPluginConfig.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandDmabufClientBufferIntegrationPluginConfigVersion.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandDmabufClientBufferIntegrationPluginConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandDmabufClientBufferIntegrationPluginTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandDmabufClientBufferIntegrationPluginTargets.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandEglClientBufferIntegrationPluginAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandEglClientBufferIntegrationPluginConfig.cmake
 /usr/lib64/cmake/Qt6WaylandCompositor/Qt6QWaylandEglClientBufferIntegrationPluginConfigVersion.cmake
@@ -679,11 +697,14 @@ popd
 /V3/usr/lib64/qt6/plugins/platforms/libqwayland-egl.so
 /V3/usr/lib64/qt6/plugins/platforms/libqwayland-generic.so
 /V3/usr/lib64/qt6/plugins/wayland-decoration-client/libbradient.so
+/V3/usr/lib64/qt6/plugins/wayland-graphics-integration-client/libdmabuf-server.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-client/libdrm-egl-server.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-client/libshm-emulation-server.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-client/libvulkan-server.so
+/V3/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-dmabuf-server-buffer.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so
+/V3/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-linux-dmabuf-unstable-v1.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-shm-emulation-server.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-vulkan-server.so
 /V3/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-wayland-egl.so
@@ -706,11 +727,14 @@ popd
 /usr/lib64/qt6/plugins/platforms/libqwayland-egl.so
 /usr/lib64/qt6/plugins/platforms/libqwayland-generic.so
 /usr/lib64/qt6/plugins/wayland-decoration-client/libbradient.so
+/usr/lib64/qt6/plugins/wayland-graphics-integration-client/libdmabuf-server.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-client/libdrm-egl-server.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-client/libshm-emulation-server.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-client/libvulkan-server.so
+/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-dmabuf-server-buffer.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-drm-egl-server-buffer.so
+/usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-linux-dmabuf-unstable-v1.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-shm-emulation-server.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-vulkan-server.so
 /usr/lib64/qt6/plugins/wayland-graphics-integration-server/libqt-wayland-compositor-wayland-egl.so
