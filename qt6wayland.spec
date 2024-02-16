@@ -7,7 +7,7 @@
 #
 Name     : qt6wayland
 Version  : 6.6.2
-Release  : 9
+Release  : 10
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtwayland-everywhere-src-6.6.2.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtwayland-everywhere-src-6.6.2.tar.xz
 Summary  : No detailed summary available
@@ -83,7 +83,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1707953195
+export SOURCE_DATE_EPOCH=1708120257
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -144,7 +144,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1707953195
+export SOURCE_DATE_EPOCH=1708120257
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6wayland
 cp %{_builddir}/qtwayland-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6wayland/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
